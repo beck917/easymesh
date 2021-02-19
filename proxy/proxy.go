@@ -5,6 +5,7 @@ import (
 	"os"
 	"strings"
 
+	"github.com/beck917/easymesh/wrapper/ratelimiter"
 	"github.com/micro/go-micro"
 	"github.com/micro/go-micro/client"
 	"github.com/micro/go-micro/config/options"
@@ -114,7 +115,9 @@ func Run(sOpts *ServerOptions, srvOpts ...micro.Option) {
 			// TODO: strip prefix?
 			popts = append(popts, proxy.WithEndpoint(Endpoint))
 			p = http.NewProxy(popts...)
-			s = smucp.NewServer()
+			s = smucp.NewServer(
+				server.WrapHandler(ratelimiter.NewHandlerWrapper(10)),
+			)
 		default:
 			// TODO: strip prefix?
 			popts = append(popts, proxy.WithEndpoint(Endpoint))

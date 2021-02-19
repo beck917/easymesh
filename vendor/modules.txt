@@ -178,6 +178,10 @@ github.com/pkg/errors
 go.uber.org/atomic
 # go.uber.org/multierr v1.3.0
 go.uber.org/multierr
+# go.uber.org/ratelimit v0.0.0-20180316092928-c15da0234277
+## explicit
+go.uber.org/ratelimit
+go.uber.org/ratelimit/internal/clock
 # go.uber.org/tools v0.0.0-20190618225709-2cfd321de3ee
 go.uber.org/tools/update-license
 # go.uber.org/zap v1.12.0

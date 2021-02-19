@@ -18,6 +18,7 @@ require (
 	github.com/miekg/dns v1.1.27 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/stretchr/testify v1.6.1 // indirect
+	go.uber.org/ratelimit v0.0.0-20180316092928-c15da0234277
 	golang.org/x/crypto v0.0.0-20200709230013-948cd5f35899 // indirect
 	golang.org/x/lint v0.0.0-20191125180803-fdd1cda4f05f // indirect
 	golang.org/x/sync v0.0.0-20201207232520-09787c993a3a // indirect
